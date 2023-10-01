@@ -2,13 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "base/base.c"
+#include "base/mesh/polygon.c"
 
 void hello(void) {
     printf("run\n");
 }
 
+/*
 unsigned int index_vector = 0;
-const unsigned int MAX_VECTOR = 100;
+#define MAX_VECTOR 100;
 Vector3D **vectors;
 
 void addVector(Vector3D *vec){
@@ -18,10 +20,18 @@ void addVector(Vector3D *vec){
     }
 }
 
+void addAllVector(Vector3D *vec, ...){
+    if (index_vector < MAX_VECTOR) {
+        vectors[index_vector] = vec;
+        index_vector++;
+    }
+}
+ */
+
 int main(){
     hello();
 
-    vectors = (Vector3D **) malloc(MAX_VECTOR * sizeof (Vector3D *));
+    //vectors = (Vector3D **) malloc(MAX_VECTOR * sizeof (Vector3D *));
 
     //Base base;
     Matrix3D mat;
