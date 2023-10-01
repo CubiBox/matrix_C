@@ -34,8 +34,8 @@ void vector_add_val(Vector3D *vec, double val){
  */
 void vector_add_vec(Vector3D *vec1, Vector3D *vec2){
     vec1->x += vec2->x;
-    vec1->y += vec2->x;
-    vec1->z += vec2->x;
+    vec1->y += vec2->y;
+    vec1->z += vec2->z;
 }
 
 
@@ -55,8 +55,8 @@ void vector_sub_val(Vector3D *vec, double val){
  */
 void vector_sub_vec(Vector3D *vec1, Vector3D *vec2){
     vec1->x -= vec2->x;
-    vec1->y -= vec2->x;
-    vec1->z -= vec2->x;
+    vec1->y -= vec2->y;
+    vec1->z -= vec2->z;
 }
 
 
@@ -76,8 +76,8 @@ void vector_mul_val(Vector3D *vec, double val){
  */
 void vector_mul_vec(Vector3D *vec1, Vector3D *vec2){
     vec1->x *= vec2->x;
-    vec1->y *= vec2->x;
-    vec1->z *= vec2->x;
+    vec1->y *= vec2->y;
+    vec1->z *= vec2->z;
 }
 
 
@@ -97,8 +97,8 @@ void vector_div_val(Vector3D *vec, double val){
  */
 void vector_div_vec(Vector3D *vec1, Vector3D *vec2){
     vec1->x /= vec2->x;
-    vec1->y /= vec2->x;
-    vec1->z /= vec2->x;
+    vec1->y /= vec2->y;
+    vec1->z /= vec2->z;
 }
 
 /**
@@ -106,5 +106,5 @@ void vector_div_vec(Vector3D *vec1, Vector3D *vec2){
  * @param vec
  */
 void printVector(Vector3D *vec){
-    printf("x: %f, y: %f, z: %f\n", vec->x, vec->y, vec->z);
+    printf("Vector3D : { x: %f, y: %f, z: %f}\n", vec->x, vec->y, vec->z);
 }

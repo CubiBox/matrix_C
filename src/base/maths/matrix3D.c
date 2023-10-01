@@ -3,6 +3,9 @@
 //
 #include "vector3D.c"
 
+/**
+ * Matrix3D is a matrix 3 * 3
+ */
 typedef struct {
     Vector3D *vec1;
     Vector3D *vec2;
@@ -14,7 +17,7 @@ typedef struct {
  * @param vec1
  * @param vec2
  * @param vec3
- * @return
+ * @return new Matrix3D
  */
 Matrix3D newMatrix3D(Vector3D *vec1, Vector3D *vec2, Vector3D *vec3){
     Matrix3D mat;
@@ -35,4 +38,21 @@ void matrix_mul_to_vector(Matrix3D *mat, Vector3D *vec){
     vec->x = x;
     vec->y = y;
     vec->z = z;
+}
+
+/**
+ * print matrix values
+ * @param mat the matrix
+ */
+void printMatrix3D(Matrix3D *mat){
+    printf("Matrix3D : [\n\t%f\t%f\t%f\n\t%f\t%f\t%f\n\t%f\t%f\t%f\n]\n",
+           mat->vec1->x,
+           mat->vec1->y,
+           mat->vec1->z,
+           mat->vec2->x,
+           mat->vec2->y,
+           mat->vec2->z,
+           mat->vec3->x,
+           mat->vec3->y,
+           mat->vec3->z);
 }
